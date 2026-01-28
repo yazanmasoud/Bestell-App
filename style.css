@@ -1,0 +1,85 @@
+/* content limitation */
+.Content {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+
+/* Header */
+.SiteHeader {
+    background-color: #E76C1F;
+    height: 80px;
+}
+
+.MenuButton {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+
+
+/* Header Logo */
+.HeaderLogoMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.HeaderLogoMenu img {}
+
+
+
+/* main */
+.SiteMain {
+    flex: 1;
+}
+
+/* hero images */
+.HeroImages {
+    position: relative;
+}
+
+
+.MainImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.BurgerLogo {
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.NameOfRestaurantImage{
+    display: flex;
+    justify-content: center;
+    margin-top: 88px;
+}
+
+/* meals */
+.MealsSections{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #E76C1F;
+    margin: 16px 0;
+    color: white;
+    font-size: 40px;
+    gap: 100px;
+    padding-left: 96px;
+    
+}
+
+
+/* Footer */
+.SiteFooter {
+    background-color: #E76C1F;
+    height: 80px;
+}
