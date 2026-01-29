@@ -64,7 +64,7 @@
 }
 
 /* meals */
-.MealsSections{
+.MealContentTitle{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -77,9 +77,17 @@
     
 }
 
-.MealsSections img{
+.MealContentTitle img{
     position: absolute;
     left: 136px;
+}
+
+.MealContent{
+    width: 700px;
+    height: 200px;
+    background-color: #fce9dc;
+    margin: 32px 100px;
+    border-radius: 10px;
 }
 
 
