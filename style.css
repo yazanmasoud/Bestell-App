@@ -73,8 +73,13 @@
     color: white;
     font-size: 40px;
     gap: 100px;
-    padding-left: 96px;
+    padding: 5px 0 5px 300px;
     
+}
+
+.MealsSections img{
+    position: absolute;
+    left: 136px;
 }
 
 
