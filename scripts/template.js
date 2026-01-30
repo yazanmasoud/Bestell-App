@@ -2,7 +2,7 @@ function getFoodTemplate(meal) {
     return `<article class="Meal">
 
                 <div class="MealContent">
-                    <img class="MealContentImage" src="./assets/images/meals/burgers/allMeatBurger.png"
+                    <img class="MealContentImage" src="${meal.image}"
                         alt="all Meat Burger">
                     <div class="MealContentDescribtion">
                         <h2>${meal.name}</h2>
@@ -18,7 +18,8 @@ function getFoodTemplate(meal) {
 
 function getCategoryTemplate(category) {
     return `    <div class="MealContentTitle">
-                    <img src="./assets/icons/hamburgerIcon.svg" alt="hamburger icon">
+                    <img src="${getCategoryIcon(category)}" alt="hamburger icon">
                     <h2 class="MealContentTitleH2">${category}</h2>
                 </div>`
 } 
+
