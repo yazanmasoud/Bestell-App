@@ -1,6 +1,5 @@
 function getFoodTemplate(meal) {
-    return `<article class="Meal">
-
+    return `<article class="Content Meal">
                 <div class="MealContent">
                     <img class="MealContentImage" src="${meal.image}"
                         alt="all Meat Burger">
@@ -18,8 +17,10 @@ function getFoodTemplate(meal) {
 
 function getCategoryTemplate(category) {
     return `    <div class="MealContentTitle">
-                    <img src="${getCategoryIcon(category)}" alt="hamburger icon">
+                    <div class="Content MealContentTitleInner">
+                    <img class="CategoryIcon" src="${getCategoryIcon(category)}" alt="category icon">
                     <h2 class="MealContentTitleH2">${category}</h2>
+                    </div>
                 </div>`
 } 
 

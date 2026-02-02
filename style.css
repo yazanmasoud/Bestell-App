@@ -1,8 +1,8 @@
 /* content limitation */
 .Content {
-    max-width: 1920px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 16px;
+
 }
 
 
@@ -33,13 +33,18 @@
 
 
 /* main */
-.SiteMain {
-    flex: 1;
-}
 
 /* hero images */
-.HeroImages {
+.Hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+.HeroImage {
     position: relative;
+    width: 100%;
 }
 
 
@@ -64,26 +69,34 @@
 }
 
 /* meals */
-.MealContentTitleH2{
+.MealContentTitleH2 {
     font-size: 32px;
 }
+
 .MealContentTitle {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     background-color: #E76C1F;
-    margin: 104px 0;
     color: white;
-    font-size: 40px;
-    gap: 100px;
-    padding: 5px 0 5px 300px;
-
+    margin: 104px 0 56px;
 }
 
-.MealContentTitle img {
+.MealContentTitleInner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 24px 12px 120px;
+}
+
+/* Icon ragt über den Balken */
+.CategoryIcon {
     position: absolute;
-    left: 136px;
+    left: 24px;
+    top: 40%;
+    transform: translateY(-50%);
+    height: 80px;
 }
+
+
+
 
 .MealContent {
     width: 700px;
