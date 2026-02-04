@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell App</title>
+
     <link rel="stylesheet" href="styles/standard.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/meals.css">
+    <link rel="stylesheet" href="./styles/assets.css">
+
     <script src="script.js" defer></script>
     <script src="scripts/food.js" defer></script>
     <script src="scripts/template.js" defer></script>
 </head>
 
 <body onload="init()">
-    <header class="SiteHeader">
-        <div class="Content HeaderLogoMenu">
-            <img src="./logos/Logo-bestellapp.svg" alt="Page Logo">
-            <button class="MenuButton"><img src="./buttons/menu.svg" alt="menu button"></button>
-        </div>
-    </header>
 
-    <main class="SiteMain">
-        <div class="Hero">
+<header class="SiteHeader">
+    <div class="Content HeaderLogoMenu">
+        <img src="./logos/Logo-bestellapp.svg" alt="Page Logo">
+        <button class="MenuButton">
+            <img src="./buttons/menu.svg" alt="menu button">
+        </button>
+    </div>
+</header>
+
+<main class="SiteMain">
+
+    <!-- HERO -->
+    <div class="Hero">
         <div class="HeroImage">
-            <img class="MainImage" src="./assets/images/mainImage.png" alt="Pizza and Burger image">
-            <img class="BurgerLogo" src="./logos/burgerLogo.png" alt="burger logo">
+            <img class="MainImage" src="./assets/images/mainImage.png" alt="">
+            <img class="BurgerLogo" src="./logos/burgerLogo.png" alt="">
         </div>
-                    <img src="./assets/images/restaurantNameImage.png" alt="">
-        </div>
+        <img src="./assets/images/restaurantNameImage.png" alt="">
+    </div>
 
+    <!-- CATEGORY STRIPES (VOLLE BREITE) -->
+    <section id="meal-category"></section>
 
-        <div>
-            <section id="meal-category"></section>
-        </div>
-        
+    <!-- MEALS + BASKET -->
+    <div class="MealsAndBasket Content">
 
+        <section class="Meals" id="meals"></section>
 
+        <aside class="Basket">
+            <section id="shopping-cart">
+                
+            </section>
+        </aside>
 
-    </main>
+    </div>
 
-    <footer class="SiteFooter">
-        <div>
+</main>
 
-        </div>
+<footer class="SiteFooter"></footer>
 
-    </footer>
 </body>
-
 </html>

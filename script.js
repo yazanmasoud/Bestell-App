@@ -16,7 +16,6 @@ function init() {
             myFood.innerHTML += getFoodTemplate(meal);
         }
     }
-
 }
 
 

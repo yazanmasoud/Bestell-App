@@ -1,15 +1,13 @@
-/* content limitation */
+/* CONTENT LIMITATION */
 .Content {
     max-width: 1440px;
     margin: 0 auto;
-
 }
 
-
-/* Header */
+/* HEADER */
 .SiteHeader {
     background-color: #E76C1F;
-    height: 80px;
+    height: 88px;
 }
 
 .MenuButton {
@@ -18,9 +16,6 @@
     padding: 0;
 }
 
-
-
-/* Header Logo */
 .HeaderLogoMenu {
     display: flex;
     justify-content: space-between;
@@ -28,25 +23,108 @@
     padding: 10px;
 }
 
-.HeaderLogoMenu img {}
+/* MEALS + BASKET LAYOUT */
+.MealsAndBasket {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
 
-
-
-/* main */
-
-/* hero images */
-.Hero{
+/* MEALS CONTAINER */
+.Meals {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+/* CATEGORY TITLE */
+.MealContentTitle {
+    background-color: #E76C1F;
+    color: white;
+    margin: 104px 0 56px;
+}
+
+.MealContentTitleInner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 24px 12px 120px;
+}
+
+.MealContentTitleH2 {
+    font-size: 32px;
+}
+
+.CategoryIcon {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80px;
+}
+
+/* SINGLE MEAL */
+.MealContent {
+    width: 700px;
+    height: 160px;
+    background-color: #fce9dc;
+    margin: 32px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* MEAL PARTS */
+.MealContentImage {
+    width: 220px;
+    height: 130px;
+    margin-left: 16px;
+}
+
+.MealContentDescribtion {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.MealContentPriceAndButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-right: 16px;
+}
+
+.MealContentPriceAndButton button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* BASKET */
+.Basket {
+    width: 308px;
+    min-height: 600px;
+    background-color: #E76C1F;
+    position: fixed;
+    top: 100px;
+    right: 100px;
+}
+
+/* HERO */
+.Hero {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 120px;
 }
+
 .HeroImage {
     position: relative;
     width: 100%;
 }
-
 
 .MainImage {
     width: 100%;
@@ -62,88 +140,7 @@
     transform: translate(-50%, -50%);
 }
 
-.NameOfRestaurantImage {
-    display: flex;
-    justify-content: center;
-    margin-top: 88px;
-}
-
-/* meals */
-.MealContentTitleH2 {
-    font-size: 32px;
-}
-
-.MealContentTitle {
-    background-color: #E76C1F;
-    color: white;
-    margin: 104px 0 56px;
-}
-
-.MealContentTitleInner {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 12px 24px 12px 120px;
-}
-
-/* Icon ragt über den Balken */
-.CategoryIcon {
-    position: absolute;
-    left: 24px;
-    top: 40%;
-    transform: translateY(-50%);
-    height: 80px;
-}
-
-
-
-
-.MealContent {
-    width: 700px;
-    height: 160px;
-    background-color: #fce9dc;
-    margin: 32px 100px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-.MealContentImage {
-    width: 220px;
-    height: 130px;
-    margin-left: 16px;
-}
-
-.MealContentDescribtion {
-    width: 50%;
-    align-self: flex-start;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 14px 8px 14px 0;
-    gap: 16px;
-}
-
-.MealContentPriceAndButton {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 16px 16px 16px 0;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.MealContentPriceAndButton button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-}
-
-/* Footer */
+/* FOOTER */
 .SiteFooter {
     background-color: #E76C1F;
     height: 80px;
