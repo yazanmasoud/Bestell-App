@@ -1,22 +1,22 @@
 /* CONTENT LIMITATION */
-.Content {
+.content {
     max-width: 1440px;
     margin: 0 auto;
 }
 
 /* HEADER */
-.SiteHeader {
+.site-header {
     background-color: #E76C1F;
     height: 88px;
 }
 
-.MenuButton {
+.menu-button {
     background: none;
     border: none;
     padding: 0;
 }
 
-.HeaderLogoMenu {
+.header-logo-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@
 }
 
 /* MEALS + BASKET LAYOUT */
-.MealsAndBasket {
+.meals-and-basket {
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -32,30 +32,30 @@
 }
 
 /* MEALS CONTAINER */
-.Meals {
+.meals {
     display: flex;
     flex-direction: column;
 }
 
 /* CATEGORY TITLE */
-.MealContentTitle {
+.meal-content-title {
     background-color: #E76C1F;
     color: white;
     margin: 104px 0 56px;
 }
 
-.MealContentTitleInner {
+.meal-content-title-inner {
     position: relative;
     display: flex;
     align-items: center;
     padding: 12px 24px 12px 120px;
 }
 
-.MealContentTitleH2 {
+.meal-content-title-h2 {
     font-size: 32px;
 }
 
-.CategoryIcon {
+.category-icon {
     position: absolute;
     left: 24px;
     top: 50%;
@@ -64,7 +64,7 @@
 }
 
 /* SINGLE MEAL */
-.MealContent {
+.meal-content {
     width: 700px;
     height: 160px;
     background-color: #fce9dc;
@@ -76,20 +76,20 @@
 }
 
 /* MEAL PARTS */
-.MealContentImage {
+.meal-content-image {
     width: 220px;
     height: 130px;
     margin-left: 16px;
 }
 
-.MealContentDescribtion {
+.meal-content-describtion {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.MealContentPriceAndButton {
+.meal-content-price-and-button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -97,42 +97,97 @@
     padding-right: 16px;
 }
 
-.MealContentPriceAndButton button {
+.meal-content-price-and-button button {
     background: none;
     border: none;
     cursor: pointer;
 }
 
 /* BASKET */
-.Basket {
+.basket {
     width: 308px;
-    min-height: 600px;
-    background-color: #E76C1F;
+    min-height: 100vh;
+    background-color: #363433;
     position: fixed;
-    top: 100px;
-    right: 100px;
+    top: 0px;
+    right: 0px;
+    border-radius: 10px;
+}
+
+.basket-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fce9dc;
+}
+
+.basket-title {
+    margin-bottom: 8px;
+    color: #fce9dc;
+    text-align: center;
+    padding: 10px;
+}
+
+.basket-meal {
+    color: black;
+    background-color: #fce9dc;
+    width: 90%;
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    gap: 32px;
+    align-items: baseline;
+    margin-bottom: 16px;
+}
+
+.basket-meal-name {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.delet-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.plus-icon{
+    width: 16px;
+}
+
+.basket-icons-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.basket-icons-block button {
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 /* HERO */
-.Hero {
+.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 120px;
 }
 
-.HeroImage {
+.hero-image {
     position: relative;
     width: 100%;
 }
 
-.MainImage {
+.main-image {
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
 
-.BurgerLogo {
+.burger-logo {
     width: 200px;
     position: absolute;
     top: 100%;
@@ -141,7 +196,7 @@
 }
 
 /* FOOTER */
-.SiteFooter {
+.site-footer {
     background-color: #E76C1F;
     height: 80px;
 }

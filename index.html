@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,49 +14,51 @@
     <script src="script.js" defer></script>
     <script src="scripts/food.js" defer></script>
     <script src="scripts/template.js" defer></script>
+    <link rel="icon" href="./logos/burgerLogo.png">
 </head>
 
 <body onload="init()">
 
-<header class="SiteHeader">
-    <div class="Content HeaderLogoMenu">
-        <img src="./logos/Logo-bestellapp.svg" alt="Page Logo">
-        <button class="MenuButton">
-            <img src="./buttons/menu.svg" alt="menu button">
-        </button>
-    </div>
-</header>
-
-<main class="SiteMain">
-
-    <!-- HERO -->
-    <div class="Hero">
-        <div class="HeroImage">
-            <img class="MainImage" src="./assets/images/mainImage.png" alt="">
-            <img class="BurgerLogo" src="./logos/burgerLogo.png" alt="">
+    <header class="site-header">
+        <div class="content header-logo-menu">
+            <img src="./logos/Logo-bestellapp.svg" alt="Page Logo">
+            <button class="menu-button">
+                <img src="./buttons/menu.svg" alt="menu button">
+            </button>
         </div>
-        <img src="./assets/images/restaurantNameImage.png" alt="">
-    </div>
+    </header>
 
-    <!-- CATEGORY STRIPES (VOLLE BREITE) -->
-    <section id="meal-category"></section>
+    <main class="site-main">
 
-    <!-- MEALS + BASKET -->
-    <div class="MealsAndBasket Content">
+        <!-- HERO -->
+        <div class="hero">
+            <div class="hero-image">
+                <img class="main-image" src="./assets/images/mainImage.png" alt="">
+                <img class="burger-logo" src="./logos/burgerLogo.png" alt="">
+            </div>
+            <img src="./assets/images/restaurantNameImage.png" alt="">
+        </div>
 
-        <section class="Meals" id="meals"></section>
+        <!-- CATEGORY STRIPES (VOLLE BREITE) -->
+        <section id="meal-category"></section>
 
-        <aside class="Basket">
-            <section id="shopping-cart">
-                
-            </section>
-        </aside>
+        <!-- MEALS + BASKET -->
+        <div class="meals-and-basket content">
 
-    </div>
+            <section class="meals" id="meals"></section>
 
-</main>
+            <aside  class="basket">
+                <h2 class="basket-title">Your Basket</h2>
+                <section class="basket-content" id="basket"></section>
+                <section></section>
+            </aside>
 
-<footer class="SiteFooter"></footer>
+        </div>
+
+    </main>
+
+    <footer class="site-footer"></footer>
 
 </body>
+
 </html>

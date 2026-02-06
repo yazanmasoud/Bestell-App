@@ -1,3 +1,4 @@
+let basket = [];
 function init() {
     let myFood = document.getElementById('meal-category');
     myFood.innerHTML = "";
@@ -9,11 +10,11 @@ function init() {
 
         if (meal.category !== currentCategory) {
             myFood.innerHTML += getCategoryTemplate(meal.category)
-            myFood.innerHTML += getFoodTemplate(meal);
+            myFood.innerHTML += getFoodTemplate(meal, index);
             currentCategory = meal.category;
         }
         else {
-            myFood.innerHTML += getFoodTemplate(meal);
+            myFood.innerHTML += getFoodTemplate(meal, index);
         }
     }
 }
@@ -42,6 +43,20 @@ function getCategoryIcon(category) {
     }
     else {
         return "./assets/icons/Salad.svg";
+    }
+}
+
+function addMealToBasket(mealIndex) {
+    const meal = meals[mealIndex];
+    basket.push(meal);
+    renderBasket();
+}
+
+function renderBasket() {
+    let basketMeal = document.getElementById('basket');
+    basketMeal.innerHTML = "";
+    for (let mealIndex = 0; mealIndex < basket.length; mealIndex++) {
+        basketMeal.innerHTML += getBasketTemplate(basket[mealIndex]);
     }
 }
 
