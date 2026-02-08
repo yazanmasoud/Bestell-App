@@ -48,7 +48,49 @@ function getCategoryIcon(category) {
 
 function addMealToBasket(mealIndex) {
     const meal = meals[mealIndex];
-    basket.push(meal);
+    const imgSrc = "";
+
+    const existingMeal = basket.find(item => item.name === meal.name);
+    if (existingMeal) {
+        existingMeal.amount++;
+    } else {
+        basket.push({
+            name: meal.name,
+            price: meal.price,
+            amount: 1
+        });
+
+    }
+    renderBasket();
+    getBasketAmountImageSource(mealIndex);
+}
+
+function getBasketAmountImageSource(mealIndex) {
+    const meal = basket[mealIndex]
+    let imgSrc = "";
+    if (meal.amount === 1) {
+        imgSrc = "./assets/icons/deleteIcon.svg";
+    }
+    else {
+        imgSrc = "./assets/icons/-.svg";
+    }
+    return imgSrc;
+}
+
+function increaseBasketMealAmount(mealIndex) {
+    const meal = basket[mealIndex];
+    meal.amount += 1;
+    renderBasket();
+}
+
+function decreaseOrDeleteBasketMealAmount(mealIndex) {
+    const meal = basket[mealIndex];
+    if (meal.amount > 1) {
+        meal.amount -= 1;
+
+    } else {
+        basket.splice(mealIndex, 1);
+    }
     renderBasket();
 }
 
@@ -56,9 +98,30 @@ function renderBasket() {
     let basketMeal = document.getElementById('basket');
     basketMeal.innerHTML = "";
     for (let mealIndex = 0; mealIndex < basket.length; mealIndex++) {
-        basketMeal.innerHTML += getBasketTemplate(basket[mealIndex]);
+        basketMeal.innerHTML += getBasketTemplate(basket[mealIndex], mealIndex);
     }
+    renderTotalPrice();
+
 }
 
-
+function renderTotalPrice() {
+    let total = document.getElementById('order-price');
+    total.innerHTML="";
+    let subTotal = 0;
+    let deliveryFee = 4.99;
+    let totalPrice
+    for (let basketIndex = 0; basketIndex < basket.length; basketIndex++) {
+        const oneMeal = basket[basketIndex];
+        subTotal += oneMeal.price * oneMeal.amount;
+    }
+    if (subTotal>50){
+        totalPrice = subTotal;
+        deliveryFee = 0;
+    }else{
+        totalPrice = subTotal + deliveryFee
+    }
+    
+    
+    total.innerHTML += getBasketPriceTemplate(subTotal , totalPrice , deliveryFee);
+}
 
