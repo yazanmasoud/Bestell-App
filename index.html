@@ -17,7 +17,7 @@
     <link rel="icon" href="./logos/burgerLogo.png">
 </head>
 
-<body onload="init()">
+<body onload="init() , toggleBasket()">
 
     <header class="site-header">
         <div class="content header-logo-menu">
@@ -27,7 +27,6 @@
             </button>
         </div>
     </header>
-
     <main class="site-main">
 
         <!-- HERO -->
@@ -39,6 +38,8 @@
             <img src="./assets/images/restaurantNameImage.png" alt="Name of the restaurant">
         </div>
 
+        
+
         <section class="bar-slider">
             <div class="bar-slider-inner content">
                 <a href="#burger-sandwiches"><span>Burger & Sandwiches</span></a>
@@ -49,10 +50,14 @@
         <section id="meal-category"></section>
 
         <div class="meals-and-basket content">
+            <button class="basket-button-icon" onclick="toggleBasket()"><img src="./assets/icons/shopping-cart-orange.png" alt=""></button>
 
             <section class="meals" id="meals"></section>
 
-            <aside class="basket">
+            <aside id="basket-site" class="basket content">
+                <header>
+                    <button onclick="closeBasket()" class="basket-close-button">X</button>
+                </header>
                 <h2 class="basket-title">Your Basket</h2>
                 <section class="basket-content" id="basket"></section>
                 <section class="basket-content" id="order-price"></section>

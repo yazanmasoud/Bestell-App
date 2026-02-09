@@ -106,7 +106,7 @@ function renderBasket() {
 
 function renderTotalPrice() {
     let total = document.getElementById('order-price');
-    total.innerHTML="";
+    total.innerHTML = "";
     let subTotal = 0;
     let deliveryFee = 4.99;
     let totalPrice
@@ -114,22 +114,36 @@ function renderTotalPrice() {
         const oneMeal = basket[basketIndex];
         subTotal += oneMeal.price * oneMeal.amount;
     }
-    if (subTotal>50){
+    if (basket.length === 0) {
+        deliveryFee = 0;
+    }
+    else if (subTotal > 50) {
         totalPrice = subTotal;
         deliveryFee = 0;
-    }else{
+    } else {
         totalPrice = subTotal + deliveryFee
     }
-    
-    total.innerHTML += getBasketPriceTemplate(subTotal , totalPrice , deliveryFee);
+
+    total.innerHTML += getBasketPriceTemplate(subTotal, totalPrice, deliveryFee);
 }
 
 function createID(category) {
-  return category
-    .toLowerCase()                 
-    .replace(/[^a-z0-9\s]/g, "") /* delete everything which is not a-z,0-9 and space(/s) everywhere in the whole text /g, replace all that with nothing , "" */   
-    .trim()                        
-    .replace(/\s+/g, "-");         
+    return category
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, "") /* delete everything which is not a-z,0-9 and space(/s) everywhere in the whole text /g, replace all that with nothing , "" */
+        .trim()
+        .replace(/\s+/g, "-");
+}
+
+function toggleBasket() {
+    let basketMeal = document.getElementById('basket-site');
+    basketMeal.classList.toggle("toggle-basket")
+
+}
+
+function closeBasket() {
+        let basketMeal = document.getElementById('basket-site');
+    basketMeal.classList.add("toggle-basket")
 }
 
 
