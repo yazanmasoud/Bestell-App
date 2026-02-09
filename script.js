@@ -61,6 +61,7 @@ function addMealToBasket(mealIndex) {
         });
 
     }
+    openBasket();
     renderBasket();
     getBasketAmountImageSource(mealIndex);
 }
@@ -142,8 +143,13 @@ function toggleBasket() {
 }
 
 function closeBasket() {
-        let basketMeal = document.getElementById('basket-site');
+    let basketMeal = document.getElementById('basket-site');
     basketMeal.classList.add("toggle-basket")
+}
+
+function openBasket() {
+    let basketMeal = document.getElementById('basket-site');
+    basketMeal.classList.remove("toggle-basket")
 }
 
 
