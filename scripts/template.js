@@ -16,7 +16,7 @@ function getFoodTemplate(meal , mealIndex) {
 }
 
 function getCategoryTemplate(category) {
-    return `    <div class="meal-content-title">
+    return `    <div id="${createID(category)}" class="meal-content-title">
                     <div class="content meal-content-title-inner">
                     <img class="category-icon" src="${getCategoryIcon(category)}" alt="category icon">
                     <h2 class="meal-content-title-h2">${category}</h2>

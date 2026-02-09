@@ -121,7 +121,15 @@ function renderTotalPrice() {
         totalPrice = subTotal + deliveryFee
     }
     
-    
     total.innerHTML += getBasketPriceTemplate(subTotal , totalPrice , deliveryFee);
 }
+
+function createID(category) {
+  return category
+    .toLowerCase()                 
+    .replace(/[^a-z0-9\s]/g, "") /* delete everything which is not a-z,0-9 and space(/s) everywhere in the whole text /g, replace all that with nothing , "" */   
+    .trim()                        
+    .replace(/\s+/g, "-");         
+}
+
 

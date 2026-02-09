@@ -38,13 +38,26 @@
 }
 
 /* CATEGORY TITLE */
-.bar-slider{
+.bar-slider {
     background-color: #E76C1F;
     color: white;
+
+}
+
+.bar-slider-inner {
     font-size: 32px;
     display: flex;
     justify-content: space-around;
+    padding: 8px;
+    margin-top: 40px;
+
 }
+
+.bar-slider-inner a {
+    text-decoration: none;
+    color: white;
+
+} 
 
 .meal-content-title {
     background-color: #E76C1F;
@@ -108,7 +121,7 @@
 .meal-content-price-and-button button {
     background: none;
     border: none;
-    
+
 }
 
 /* HERO */
