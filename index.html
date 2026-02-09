@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/standard.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./styles/meals.css">
-    <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/basket.css">
 
     <script src="script.js" defer></script>
     <script src="scripts/food.js" defer></script>
@@ -36,23 +36,24 @@
                 <img class="main-image" src="./assets/images/mainImage.png" alt="">
                 <img class="burger-logo" src="./logos/burgerLogo.png" alt="">
             </div>
-            <img src="./assets/images/restaurantNameImage.png" alt="">
+            <img src="./assets/images/restaurantNameImage.png" alt="Name of the restaurant">
         </div>
 
-        <!-- CATEGORY STRIPES (VOLLE BREITE) -->
+        <section class="bar-slider">
+            <a href=""><span>Burger & Sandwiches</span></a>
+            <a href=""><span>Pizza</span></a>
+            <a href=""><span>Salad</span></a>
+        </section>
         <section id="meal-category"></section>
 
-        <!-- MEALS + BASKET -->
         <div class="meals-and-basket content">
 
             <section class="meals" id="meals"></section>
 
-            <aside class="basket content">
+            <aside class="basket">
                 <h2 class="basket-title">Your Basket</h2>
                 <section class="basket-content" id="basket"></section>
-                <section id="order-price">
-
-                </section>
+                <section class="basket-content" id="order-price"></section>
             </aside>
 
         </div>

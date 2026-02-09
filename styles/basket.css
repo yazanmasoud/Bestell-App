@@ -1,0 +1,91 @@
+.basket {
+    width: 380px;
+    min-height: 50vh;
+    background-color: #363433;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.basket-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fce9dc;
+}
+
+.basket-title {
+    margin-bottom: 8px;
+    color: #fce9dc;
+    text-align: center;
+    padding: 10px;
+}
+
+.basket-meal {
+    color: black;
+    background-color: #fce9dc;
+    width: 90%;
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    gap: 32px;
+    align-items: flex-end;
+    margin-bottom: 16px;
+    justify-content: space-between;
+}
+
+.basket-meal-name {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.delet-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.plus-icon {
+    width: 13px;
+}
+
+.basket-icons-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.basket-icons-block button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.basket-price-table {
+    color: #fce9dc;
+    margin-bottom: 0;
+}
+
+.basket-price-table td {
+    padding: 16px 40px;
+}
+
+.basket-split-line {
+    height: 1px;
+    width: 100%;
+    background-color: #fce9dc;
+}
+
+.buy-now-button{
+    background-color: #E76C1F;
+    width: 140px;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    margin: 32px;
+}

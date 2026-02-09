@@ -50,14 +50,15 @@ function getBasketPriceTemplate(subTotal , totalPrice , deliveryFee) {
                     <td>delivery fee (Free for orders over €50.)</td>
                     <td>${deliveryFee}€</td>
               </tr>
-            </table>
-            <div class="basket-split-line">.</div>
-            <table class="basket-price-table">
+              <div class="basket-split-line">.</div>
               <tr>
                     <td><strong>Total</strong></td>
                     <td>${totalPrice.toFixed(2)}€</td>
               </tr>
-            </table>`
-    
+            </table>
+            <button class="buy-now-button">Buy Now (${totalPrice.toFixed(2)}€)</button>
+
+            
+       `
 }
 
