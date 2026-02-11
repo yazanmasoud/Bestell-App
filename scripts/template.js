@@ -1,4 +1,5 @@
-function getFoodTemplate(meal , mealIndex) {
+/* Main Site (meals) */
+function getFoodTemplate(meal, mealIndex) {
     return `<article class="content meal">
                 <div class="meal-content">
                     <img class="meal-content-image" src="${meal.image}"
@@ -15,6 +16,7 @@ function getFoodTemplate(meal , mealIndex) {
             </article>`
 }
 
+/* Category of meals */
 function getCategoryTemplate(category) {
     return `    <div id="${createID(category)}" class="meal-content-title">
                     <div class="content meal-content-title-inner">
@@ -24,8 +26,9 @@ function getCategoryTemplate(category) {
                 </div>`
 }
 
-function getBasketTemplate(meal,mealIndex) {
-    return `    
+/* basket */
+function getBasketTemplate(meal, mealIndex) {
+    return `
                     <div class="basket-meal">
                         <div class="basket-meal-name">
                             <h3>${meal.name}</h3>
@@ -39,7 +42,7 @@ function getBasketTemplate(meal,mealIndex) {
                     </div>`
 }
 
-function getBasketPriceTemplate(subTotal , totalPrice , deliveryFee) {
+function getBasketPriceTemplate(subTotal, totalPrice, deliveryFee) {
     return `
             <table class="basket-price-table">
               <tr>
@@ -57,8 +60,21 @@ function getBasketPriceTemplate(subTotal , totalPrice , deliveryFee) {
               </tr>
             </table>
             <button class="buy-now-button">Buy Now (${totalPrice.toFixed(2)}€)</button>
-
-            
        `
+}
+
+function getBasketEmptyTemplate() {
+    return `    
+        <div class="empty-basket">
+        <div class="empty-basket-paragraph">
+            <span>Nothing here yet.</span>
+            <span>Go ahead and choose somthing delecious!</span>
+        </div>
+            <img class="empty-basket-logo" src="./logos/basket.svg" alt="basket logo">
+            
+        </div>
+        
+        `
+
 }
 

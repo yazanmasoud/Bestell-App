@@ -1,15 +1,15 @@
 .basket {
-    width: 380px;
-    min-height: 100vh;
-    background-color: #363433;
+    width: 350px;
+    height: 100vh;
+    background-color: white;
     position: fixed;
     top: 0px;
     right: 0px;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .toggle-basket {
@@ -20,19 +20,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: #fce9dc;
+    color: #d37b40;
+    flex: 1;
+    overflow-y: auto;
 }
+
+
 
 .basket-title {
     margin-bottom: 8px;
-    color: #fce9dc;
-    text-align: center;
+    color: #d37b40;
     padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
+
 .basket-meal {
-    color: black;
+    color: rgb(63, 61, 61);
     background-color: #fce9dc;
     width: 90%;
     padding: 8px;
@@ -71,8 +77,13 @@
     padding: 0;
 }
 
+.basket-price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .basket-price-table {
-    color: #fce9dc;
+    color: #d37b40;
     margin-bottom: 0;
 }
 
@@ -83,11 +94,11 @@
 .basket-split-line {
     height: 1px;
     width: 100%;
-    background-color: #fce9dc;
+    background-color: #d37b40;
 }
 
 .buy-now-button {
-    background-color: #E76C1F;
+    background-color: #d37b40;
     width: 140px;
     padding: 8px;
     border-radius: 8px;
@@ -98,11 +109,46 @@
 
 .basket-button-icon {
     position: fixed;
-    top: 0px;
-    right: 0px;
+    bottom: 104px;
+    right: 32px;
+    border: none;
+    background: none;
+
+}
+
+.basket-button-icon img {
+    width: 40px;
+    position: relative;
 }
 
 .basket-close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.basket-count {
+    position: absolute;
+}
+
+.empty-basket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+}
+
+.empty-basket-paragraph{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+.exit-icon{
     width: 24px;
-    height: 24px;
 }

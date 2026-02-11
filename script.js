@@ -17,6 +17,8 @@ function init() {
             myFood.innerHTML += getFoodTemplate(meal, index);
         }
     }
+    renderBasket();
+    
 }
 
 
@@ -46,9 +48,9 @@ function getCategoryIcon(category) {
     }
 }
 
+
 function addMealToBasket(mealIndex) {
     const meal = meals[mealIndex];
-    const imgSrc = "";
 
     const existingMeal = basket.find(item => item.name === meal.name);
     if (existingMeal) {
@@ -98,19 +100,25 @@ function decreaseOrDeleteBasketMealAmount(mealIndex) {
 function renderBasket() {
     let basketMeal = document.getElementById('basket');
     basketMeal.innerHTML = "";
-    for (let mealIndex = 0; mealIndex < basket.length; mealIndex++) {
-        basketMeal.innerHTML += getBasketTemplate(basket[mealIndex], mealIndex);
-    }
-    renderTotalPrice();
 
+    if (basket.length === 0) {
+        basketMeal.innerHTML = getBasketEmptyTemplate();
+    } else {
+        for (let mealIndex = 0; mealIndex < basket.length; mealIndex++) {
+            basketMeal.innerHTML += getBasketTemplate(basket[mealIndex], mealIndex);
+        }
+    }
+
+    renderTotalPrice();
 }
+
 
 function renderTotalPrice() {
     let total = document.getElementById('order-price');
     total.innerHTML = "";
     let subTotal = 0;
     let deliveryFee = 4.99;
-    let totalPrice
+    let totalPrice = 0;
     for (let basketIndex = 0; basketIndex < basket.length; basketIndex++) {
         const oneMeal = basket[basketIndex];
         subTotal += oneMeal.price * oneMeal.amount;

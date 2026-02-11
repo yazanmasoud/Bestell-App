@@ -17,7 +17,7 @@
     <link rel="icon" href="./logos/burgerLogo.png">
 </head>
 
-<body onload="init() , toggleBasket()">
+<body onload="init()">
 
     <header class="site-header">
         <div class="content header-logo-menu">
@@ -29,7 +29,10 @@
     </header>
     <main class="site-main">
 
-        <!-- HERO -->
+        <button class="basket-button-icon" onclick="toggleBasket()"><img src="./assets/icons/shopping_cart.svg"
+                alt=""></button>
+        <img class="basket-count" src="./assets/icons/Ellipse.svg" alt="">
+
         <div class="hero">
             <div class="hero-image">
                 <img class="main-image" src="./assets/images/mainImage.png" alt="">
@@ -37,8 +40,6 @@
             </div>
             <img src="./assets/images/restaurantNameImage.png" alt="Name of the restaurant">
         </div>
-
-        
 
         <section class="bar-slider">
             <div class="bar-slider-inner content">
@@ -50,19 +51,15 @@
         <section id="meal-category"></section>
 
         <div class="meals-and-basket content">
-            <button class="basket-button-icon" onclick="toggleBasket()"><img src="./assets/icons/shopping-cart-orange.png" alt=""></button>
-
             <section class="meals" id="meals"></section>
 
-            <aside id="basket-site" class="basket content">
-                <header>
-                    <button onclick="closeBasket()" class="basket-close-button">X</button>
-                </header>
-                <h2 class="basket-title">Your Basket</h2>
+            <aside class="basket content" id="basket-site">
+                <h2 class="basket-title">Your Basket
+                    <button onclick="closeBasket()" class="basket-close-button"><img class="exit-icon" src="./assets/icons/icons8-exit-50.png" alt="exit header icon"></button>
+                </h2>
                 <section class="basket-content" id="basket"></section>
-                <section class="basket-content" id="order-price"></section>
+                <section class="basket-price" id="order-price"></section>
             </aside>
-
         </div>
 
     </main>
