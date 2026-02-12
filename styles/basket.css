@@ -4,17 +4,22 @@
     background-color: white;
     position: fixed;
     top: 0px;
-    right: 0px;
+    right: 0;
     border-radius: 10px 0 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translateX(100%);
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .toggle-basket {
     display: none;
 }
+.basket.open {
+  transform: translateX(0);
+}
+
 
 .basket-content {
     display: flex;
@@ -38,9 +43,9 @@
 
 
 .basket-meal {
-    color: rgb(63, 61, 61);
+    color: #c06427;
     background-color: #fce9dc;
-    width: 90%;
+    width: 300px;
     padding: 8px;
     border-radius: 10px;
     display: flex;
@@ -61,8 +66,8 @@
     height: 18px;
 }
 
-.plus-icon {
-    width: 13px;
+.plus-minus-delet-icon {
+    width: 24px;
 }
 
 .basket-icons-block {

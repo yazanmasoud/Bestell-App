@@ -65,17 +65,16 @@ function addMealToBasket(mealIndex) {
     }
     openBasket();
     renderBasket();
-    getBasketAmountImageSource(mealIndex);
 }
 
 function getBasketAmountImageSource(mealIndex) {
     const meal = basket[mealIndex]
     let imgSrc = "";
     if (meal.amount === 1) {
-        imgSrc = "./assets/icons/deleteIcon.svg";
+        imgSrc = "./assets/icons/icons8-trash.svg";
     }
     else {
-        imgSrc = "./assets/icons/-.svg";
+        imgSrc = "./assets/icons/icons8-minus-48.png";
     }
     return imgSrc;
 }
@@ -146,18 +145,18 @@ function createID(category) {
 
 function toggleBasket() {
     let basketMeal = document.getElementById('basket-site');
-    basketMeal.classList.toggle("toggle-basket")
+    basketMeal.classList.toggle("open")
 
 }
 
 function closeBasket() {
     let basketMeal = document.getElementById('basket-site');
-    basketMeal.classList.add("toggle-basket")
+    basketMeal.classList.remove("open")
 }
 
 function openBasket() {
     let basketMeal = document.getElementById('basket-site');
-    basketMeal.classList.remove("toggle-basket")
+    basketMeal.classList.add("open")
 }
 
 
