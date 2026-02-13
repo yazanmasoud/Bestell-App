@@ -9,7 +9,7 @@ function getFoodTemplate(meal, mealIndex) {
                         <p>${meal.ingredients}</p>
                     </div>
                     <div class="meal-content-price-and-button">
-                        <span>${(meal.price).toFixed(2)}€</span>
+                        <span><strong>${(meal.price).toFixed(2)}€</strong></span>
                         <button onclick="addMealToBasket(${mealIndex})"><img src="./buttons/addToBasketButton.svg" alt=""></button>
                     </div>
                 </div>
