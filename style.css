@@ -69,7 +69,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 12px 24px 12px 120px;
+    padding: 8px 24px 8px 120px;
 }
 
 .meal-content-title-h2 {
@@ -191,4 +191,12 @@
 .site-footer {
     background-color: #E76C1F;
     height: 80px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 24px;
 }

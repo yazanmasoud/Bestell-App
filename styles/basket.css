@@ -158,11 +158,11 @@
     width: 24px;
 }
 
-.basket-meal-name-icon{
+.basket-meal-name-price{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    
+    gap: 50px;    
 }
 
 .basket-meal-h3{

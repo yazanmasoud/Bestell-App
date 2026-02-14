@@ -19,7 +19,7 @@
 </head>
 
 <body onload="init()">
-    
+
 
     <header class="site-header">
         <div class="content header-logo-menu">
@@ -57,23 +57,30 @@
 
             <aside class="basket content" id="basket-site">
                 <h2 class="basket-title">Your Basket
-                    <button onclick="closeBasket()" class="basket-close-button"><img class="exit-icon" src="./assets/icons/icons8-exit-50.png" alt="exit header icon"></button>
+                    <button onclick="closeBasket()" class="basket-close-button"><img class="exit-icon"
+                            src="./assets/icons/icons8-exit-50.png" alt="exit header icon"></button>
                 </h2>
                 <section class="basket-content" id="basket"></section>
                 <section class="basket-price" id="order-price"></section>
             </aside>
-            <dialog  class="order-confirmation" id="confirmation-dialog">
+            <dialog class="order-confirmation" id="confirmation-dialog">
                 <img class="confirmation-icon" src="./assets/icons/order-car.svg" alt="confirmation icon">
                 <div class="confirmation-text">
-                <h2>Order Confirmed!</h2>
-                <span>Your food is on the way!</span>
+                    <h2>Order Confirmed!</h2>
+                    <span>Your food is on the way!</span>
                 </div>
             </dialog>
         </div>
 
     </main>
 
-    <footer class="site-footer"></footer>
+    <footer class="site-footer">
+        <div class="footer-inner content">
+            <span>2025 BurgerHouse</span>
+            <span>Imprint</span>
+            <span>Cookie Preferences</span>
+        </div>
+    </footer>
 
 </body>
 

@@ -18,7 +18,7 @@ function init() {
         }
     }
     renderBasket();
-    
+
 
 }
 
@@ -96,10 +96,15 @@ function decreaseOrDeleteBasketMealAmount(mealIndex) {
     renderBasket();
 }
 
+function deletMealFromBasket(mealIndex) {
+    basket.splice(mealIndex, 1);
+    renderBasket();
+}
+
 function renderBasket() {
     let basketMeal = document.getElementById('basket');
     basketMeal.innerHTML = "";
-    
+
     if (basket.length === 0) {
         basketMeal.innerHTML = getBasketEmptyTemplate();
     } else {
@@ -162,8 +167,8 @@ function openConfirmationDialog() {
 
     const dialog = document.getElementById('confirmation-dialog');
     dialog.showModal();
-    setTimeout(() => {dialog.close();}, 4000);
-    basket=[];
+    setTimeout(() => { dialog.close(); }, 4000);
+    basket = [];
     renderBasket();
 }
 

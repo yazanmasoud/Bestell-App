@@ -31,17 +31,19 @@ function getBasketTemplate(meal, mealIndex) {
     return `
                     <div class="basket-meal">
                         <div class="basket-meal-name">
-                            <div class="basket-meal-name-icon">
+                            
                                 <h3 class="basket-meal-h3">${meal.name}</h3>
-                                <button><img class="plus-minus-delet-icon" src="./assets/icons/icons8-trash.svg" alt=""></button>
-                            </div>
+                            
                             <div class="basket-icons-block">
                                <button onclick="decreaseOrDeleteBasketMealAmount(${mealIndex})"><img class="plus-minus-delet-icon" src="${getBasketAmountImageSource(mealIndex)}" alt="Delete Icon"></button>
                                 <span>${meal.amount}</span>
                                 <button onclick="increaseBasketMealAmount(${mealIndex})"><img class="plus-minus-delet-icon" src="./assets/icons/icons8-plus.svg" alt="Plus Icon"></button>  
                             </div>
                         </div>
+                        <div class="basket-meal-name-price">
+                        <button onclick="deletMealFromBasket(${mealIndex})"><img class="plus-minus-delet-icon" src="./assets/icons/icons8-trash.svg" alt=""></button>
                         <span>${(meal.price * meal.amount).toFixed(2)}€</span>
+                        </div>
                     </div>`
 }
 
