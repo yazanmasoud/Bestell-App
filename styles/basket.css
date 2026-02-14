@@ -1,3 +1,23 @@
+/* Empty Basket */
+.empty-basket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+}
+
+.empty-basket-paragraph{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+/* Basket */
+
 .basket {
     width: 350px;
     height: 100vh;
@@ -13,24 +33,9 @@
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
 }
 
-.toggle-basket {
-    display: none;
-}
 .basket.open {
   transform: translateX(0);
 }
-
-
-.basket-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #d37b40;
-    flex: 1;
-    overflow-y: auto;
-}
-
-
 
 .basket-title {
     margin-bottom: 8px;
@@ -41,6 +46,14 @@
     justify-content: space-between;
 }
 
+.basket-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #d37b40;
+    flex: 1;
+    overflow-y: auto;
+}
 
 .basket-meal {
     color: #c06427;
@@ -61,9 +74,52 @@
     gap: 24px;
 }
 
+.basket-meal-name-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;    
+}
+
+/* Basket Price */
+
+.basket-split-line {
+    height: 1px;
+    width: 100%;
+    background-color: #d37b40;
+}
+
+.basket-price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.basket-price-table {
+    color: #d37b40;
+    margin-bottom: 0;
+}
+
+.basket-price-table td {
+    padding: 16px 40px;
+}
+
+/* Basket Assets */
+
 .delet-icon {
     width: 18px;
     height: 18px;
+}
+
+.basket-close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.exit-icon{
+    width: 24px;
 }
 
 .plus-minus-delet-icon {
@@ -82,26 +138,6 @@
     padding: 0;
 }
 
-.basket-price{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.basket-price-table {
-    color: #d37b40;
-    margin-bottom: 0;
-}
-
-.basket-price-table td {
-    padding: 16px 40px;
-}
-
-.basket-split-line {
-    height: 1px;
-    width: 100%;
-    background-color: #d37b40;
-}
-
 .buy-now-button {
     background-color: #d37b40;
     width: 140px;
@@ -118,7 +154,6 @@
     right: 32px;
     border: none;
     background: none;
-
 }
 
 .basket-button-icon img {
@@ -126,43 +161,8 @@
     position: relative;
 }
 
-.basket-close-button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
-}
-
 .basket-count {
     position: absolute;
-}
-
-.empty-basket {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 56px;
-}
-
-.empty-basket-paragraph{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-size: 20px;
-}
-
-.exit-icon{
-    width: 24px;
-}
-
-.basket-meal-name-price{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 50px;    
 }
 
 .basket-meal-h3{

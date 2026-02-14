@@ -11,16 +11,14 @@
     <link rel="stylesheet" href="./styles/meals.css">
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./styles/font.css">
+    <link rel="icon" href="./logos/burgerLogo.png">
 
     <script src="script.js" defer></script>
     <script src="scripts/food.js" defer></script>
     <script src="scripts/template.js" defer></script>
-    <link rel="icon" href="./logos/burgerLogo.png">
 </head>
 
 <body onload="init()">
-
-
     <header class="site-header">
         <div class="content header-logo-menu">
             <img src="./logos/Logo-bestellapp.svg" alt="Page Logo">
@@ -29,12 +27,11 @@
             </button>
         </div>
     </header>
-    <main class="site-main">
 
-        <button class="basket-button-icon" onclick="toggleBasket()"><img src="./assets/icons/shopping_cart.svg"
+    <main class="site-main">
+        <button class="basket-button-icon" onclick="openBasket()"><img src="./assets/icons/shopping_cart.svg"
                 alt=""></button>
         <img class="basket-count" src="./assets/icons/Ellipse.svg" alt="">
-
         <div class="hero">
             <div class="hero-image">
                 <img class="main-image" src="./assets/images/mainImage.png" alt="">
@@ -50,6 +47,7 @@
                 <a href="#salad"><span>Salad</span></a>
             </div>
         </section>
+
         <section id="meal-category"></section>
 
         <div class="meals-and-basket content">
@@ -63,6 +61,7 @@
                 <section class="basket-content" id="basket"></section>
                 <section class="basket-price" id="order-price"></section>
             </aside>
+
             <dialog class="order-confirmation" id="confirmation-dialog">
                 <img class="confirmation-icon" src="./assets/icons/order-car.svg" alt="confirmation icon">
                 <div class="confirmation-text">
@@ -70,8 +69,8 @@
                     <span>Your food is on the way!</span>
                 </div>
             </dialog>
-        </div>
 
+        </div>
     </main>
 
     <footer class="site-footer">
@@ -81,7 +80,6 @@
             <span>Cookie Preferences</span>
         </div>
     </footer>
-
 </body>
 
 </html>

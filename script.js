@@ -1,8 +1,9 @@
 let basket = [];
+
+
 function init() {
     let myFood = document.getElementById('meal-category');
     myFood.innerHTML = "";
-
     let currentCategory = "";
 
     for (let index = 0; index < meals.length; index++) {
@@ -18,8 +19,6 @@ function init() {
         }
     }
     renderBasket();
-
-
 }
 
 /*  also erstmal in dem init()
@@ -51,8 +50,8 @@ function getCategoryIcon(category) {
 
 function addMealToBasket(mealIndex) {
     const meal = meals[mealIndex];
-
     const existingMeal = basket.find(item => item.name === meal.name);
+
     if (existingMeal) {
         existingMeal.amount++;
     } else {
@@ -61,11 +60,12 @@ function addMealToBasket(mealIndex) {
             price: meal.price,
             amount: 1
         });
-
     }
+
     openBasket();
     renderBasket();
 }
+
 
 function getBasketAmountImageSource(mealIndex) {
     const meal = basket[mealIndex]
@@ -79,11 +79,13 @@ function getBasketAmountImageSource(mealIndex) {
     return imgSrc;
 }
 
+
 function increaseBasketMealAmount(mealIndex) {
     const meal = basket[mealIndex];
     meal.amount += 1;
     renderBasket();
 }
+
 
 function decreaseOrDeleteBasketMealAmount(mealIndex) {
     const meal = basket[mealIndex];
@@ -95,6 +97,7 @@ function decreaseOrDeleteBasketMealAmount(mealIndex) {
     }
     renderBasket();
 }
+
 
 function deletMealFromBasket(mealIndex) {
     basket.splice(mealIndex, 1);
@@ -112,7 +115,6 @@ function renderBasket() {
             basketMeal.innerHTML += getBasketTemplate(basket[mealIndex], mealIndex);
         }
     }
-
     renderTotalPrice();
 }
 
@@ -136,9 +138,9 @@ function renderTotalPrice() {
     } else {
         totalPrice = subTotal + deliveryFee
     }
-
     total.innerHTML += getBasketPriceTemplate(subTotal, totalPrice, deliveryFee);
 }
+
 
 function createID(category) {
     return category
@@ -148,28 +150,29 @@ function createID(category) {
         .replace(/\s+/g, "-");
 }
 
-function toggleBasket() {
-    let basketMeal = document.getElementById('basket-site');
-    basketMeal.classList.toggle("open")
-
-}
 
 function closeBasket() {
     let basketMeal = document.getElementById('basket-site');
     basketMeal.classList.remove("open")
 }
 
+
 function openBasket() {
     let basketMeal = document.getElementById('basket-site');
     basketMeal.classList.add("open")
 }
-function openConfirmationDialog() {
 
+
+function openConfirmationDialog() {
     const dialog = document.getElementById('confirmation-dialog');
-    dialog.showModal();
-    setTimeout(() => { dialog.close(); }, 4000);
-    basket = [];
-    renderBasket();
+
+    if (basket.length >= 1) {
+        dialog.showModal();
+        setTimeout(() => { dialog.close(); }, 4000);
+        basket = [];
+        renderBasket();
+    }
+    
 }
 
 
