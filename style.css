@@ -57,7 +57,7 @@
     text-decoration: none;
     color: white;
 
-} 
+}
 
 .meal-content-title {
     background-color: #E76C1F;
@@ -87,7 +87,7 @@
 /* SINGLE MEAL */
 .meal-content {
     width: 700px;
-    height: 160px;
+    height: 220px;
     background-color: #fce9dc;
     margin: 32px 0;
     border-radius: 10px;
@@ -99,8 +99,10 @@
 /* MEAL PARTS */
 .meal-content-image {
     width: 220px;
-    height: 130px;
+    height: 170px;
     margin-left: 16px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .meal-content-describtion {
@@ -150,6 +152,39 @@
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* Order Confirmation Dialog */
+.order-confirmation {
+    background-color: #363534;
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.order-confirmation::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.confirmation-text {
+    color: #fce9dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirmation-icon {
+    width: 88px;
 }
 
 /* FOOTER */

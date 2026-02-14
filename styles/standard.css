@@ -20,7 +20,12 @@ body {
     min-height: 100vh;
 }
 
-
 button {
     cursor: pointer;
+    background: none;
+    border: none;
 }
+dialog:not([open]) {
+    display: none;
+}
+

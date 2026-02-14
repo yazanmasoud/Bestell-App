@@ -19,8 +19,8 @@ function init() {
     }
     renderBasket();
     
-}
 
+}
 
 /*  also erstmal in dem init()
  wenn eine neue category gefunden wird,
@@ -99,7 +99,7 @@ function decreaseOrDeleteBasketMealAmount(mealIndex) {
 function renderBasket() {
     let basketMeal = document.getElementById('basket');
     basketMeal.innerHTML = "";
-
+    
     if (basket.length === 0) {
         basketMeal.innerHTML = getBasketEmptyTemplate();
     } else {
@@ -157,6 +157,14 @@ function closeBasket() {
 function openBasket() {
     let basketMeal = document.getElementById('basket-site');
     basketMeal.classList.add("open")
+}
+function openConfirmationDialog() {
+
+    const dialog = document.getElementById('confirmation-dialog');
+    dialog.showModal();
+    setTimeout(() => {dialog.close();}, 4000);
+    basket=[];
+    renderBasket();
 }
 
 

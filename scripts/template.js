@@ -31,7 +31,10 @@ function getBasketTemplate(meal, mealIndex) {
     return `
                     <div class="basket-meal">
                         <div class="basket-meal-name">
-                            <h3>${meal.name}</h3>
+                            <div class="basket-meal-name-icon">
+                                <h3 class="basket-meal-h3">${meal.name}</h3>
+                                <button><img class="plus-minus-delet-icon" src="./assets/icons/icons8-trash.svg" alt=""></button>
+                            </div>
                             <div class="basket-icons-block">
                                <button onclick="decreaseOrDeleteBasketMealAmount(${mealIndex})"><img class="plus-minus-delet-icon" src="${getBasketAmountImageSource(mealIndex)}" alt="Delete Icon"></button>
                                 <span>${meal.amount}</span>
@@ -53,13 +56,13 @@ function getBasketPriceTemplate(subTotal, totalPrice, deliveryFee) {
                     <td>delivery fee (Free for orders over €50.)</td>
                     <td>${deliveryFee}€</td>
               </tr>
-              <div class="basket-split-line">.</div>
+              <div class="basket-split-line"></div>
               <tr>
-                    <td><strong>Total</strong></td>
+                    <td ><strong>Total</strong></td>
                     <td>${totalPrice.toFixed(2)}€</td>
               </tr>
             </table>
-            <button class="buy-now-button">Buy Now (${totalPrice.toFixed(2)}€)</button>
+            <button onclick="openConfirmationDialog()" class="buy-now-button">Buy Now (${totalPrice.toFixed(2)}€)</button>
        `
 }
 
@@ -68,7 +71,8 @@ function getBasketEmptyTemplate() {
         <div class="empty-basket">
         <div class="empty-basket-paragraph">
             <span>Nothing here yet.</span>
-            <span>Go ahead and choose somthing delecious!</span>
+            <span>Go ahead and choose somthing</span>
+            <span>delicious!</span>
         </div>
             <img class="empty-basket-logo" src="./logos/basket.svg" alt="basket logo">
             

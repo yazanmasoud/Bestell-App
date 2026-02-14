@@ -157,3 +157,14 @@
 .exit-icon{
     width: 24px;
 }
+
+.basket-meal-name-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.basket-meal-h3{
+    width: 80%;
+}
