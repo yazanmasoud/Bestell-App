@@ -61,7 +61,7 @@ function addMealToBasket(mealIndex) {
             amount: 1
         });
     }
-
+    updateBasketCount();
     openBasket();
     renderBasket();
 }
@@ -102,6 +102,7 @@ function decreaseOrDeleteBasketMealAmount(mealIndex) {
 function deletMealFromBasket(mealIndex) {
     basket.splice(mealIndex, 1);
     renderBasket();
+    updateBasketCount();
 }
 
 function renderBasket() {
@@ -162,6 +163,11 @@ function openBasket() {
     basketMeal.classList.add("open")
 }
 
+function updateBasketCount() {
+    let basketCount = document.getElementById('basket-count');
+    basketCount.textContent = basket.length;
+}
+
 
 function openConfirmationDialog() {
     const dialog = document.getElementById('confirmation-dialog');
@@ -171,8 +177,9 @@ function openConfirmationDialog() {
         setTimeout(() => { dialog.close(); }, 4000);
         basket = [];
         renderBasket();
+        updateBasketCount();
     }
-    
+
 }
 
 

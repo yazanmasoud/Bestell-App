@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="styles/standard.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./styles/meals.css">
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./styles/font.css">
     <link rel="icon" href="./logos/burgerLogo.png">
@@ -29,9 +28,10 @@
     </header>
 
     <main class="site-main">
-        <button class="basket-button-icon" onclick="openBasket()"><img src="./assets/icons/shopping_cart.svg"
-                alt=""></button>
-        <img class="basket-count" src="./assets/icons/Ellipse.svg" alt="">
+        <button class="basket-button-icon" onclick="openBasket()">
+            <img src="./assets/icons/shopping_cart.svg" alt="shopping cart">
+            <span id="basket-count" class="basket-count"></span>
+        </button>
         <div class="hero">
             <div class="hero-image">
                 <img class="main-image" src="./assets/images/mainImage.png" alt="">
@@ -51,9 +51,11 @@
         <section id="meal-category"></section>
 
         <div class="meals-and-basket content">
+
             <section class="meals" id="meals"></section>
 
             <aside class="basket content" id="basket-site">
+
                 <h2 class="basket-title">Your Basket
                     <button onclick="closeBasket()" class="basket-close-button"><img class="exit-icon"
                             src="./assets/icons/icons8-exit-50.png" alt="exit header icon"></button>

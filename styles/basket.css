@@ -151,7 +151,7 @@
 .basket-button-icon {
     position: fixed;
     bottom: 104px;
-    right: 32px;
+    right: 400px;
     border: none;
     background: none;
 }
@@ -163,6 +163,18 @@
 
 .basket-count {
     position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #f2e3d6;
+    color: #d37b40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .basket-meal-h3{
