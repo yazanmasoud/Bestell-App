@@ -7,7 +7,7 @@
     gap: 56px;
 }
 
-.empty-basket-paragraph{
+.empty-basket-paragraph {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,21 +20,20 @@
 
 .basket {
     width: 350px;
-    height: 100vh;
+    max-height: 75vh;
     background-color: white;
     position: fixed;
-    top: 0px;
-    right: 0;
+    top: 88px;
+    right: calc((100% - 1440px)/2 + 24px);
     border-radius: 10px 0 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateX(100%);
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
 }
 
-.basket.open {
-  transform: translateX(0);
+.hide {
+    display: none;
 }
 
 .basket-title {
@@ -74,11 +73,11 @@
     gap: 24px;
 }
 
-.basket-meal-name-price{
+.basket-meal-name-price {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 50px;    
+    gap: 50px;
 }
 
 /* Basket Price */
@@ -89,7 +88,7 @@
     background-color: #d37b40;
 }
 
-.basket-price{
+.basket-price {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,7 +117,7 @@
     font-weight: bold;
 }
 
-.exit-icon{
+.exit-icon {
     width: 24px;
 }
 
@@ -150,10 +149,15 @@
 
 .basket-button-icon {
     position: fixed;
-    bottom: 104px;
-    right: 400px;
+    bottom: 80px;
+    right: calc((100% - 1440px)/2 + 24px);
+    background-color: white;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     border: none;
-    background: none;
 }
 
 .basket-button-icon img {
@@ -177,6 +181,55 @@
     font-size: 14px;
 }
 
-.basket-meal-h3{
+.basket-meal-h3 {
     width: 80%;
+}
+
+/* mobile */
+.mobile-basket-dialog {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #f2e3d6;
+}
+
+
+/* Responsive */
+
+
+/* -------------------------- */
+@media (max-width : 1409px) {
+    .basket {
+        right: calc((100% - 1440px)/2 + 48px);
+    }
+
+    .basket-button-icon {
+        right: calc((100% - 1440px)/2 + 48px);
+    }
+}
+
+/* --------------------------- */
+@media (max-width : 1350px) {
+    .basket {
+        right: calc((100% - 1440px)/2 + 112px);
+    }
+
+    .basket-button-icon {
+        right: calc((100% - 1440px)/2 + 112px);
+    }
+
+    .bar-slider-inner-Responsive {
+        gap: 150px;
+    }
+}
+
+/* -------------------------- */
+@media (max-width : 1230px){
+        .basket {
+        right: calc((100% - 1440px)/2 + 196px);
+    }
+
+    .basket-button-icon {
+        right: calc((100% - 1440px)/2 + 196px);
+    }
 }

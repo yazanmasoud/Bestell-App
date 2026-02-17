@@ -5,7 +5,7 @@ function getFoodTemplate(meal, mealIndex) {
                     <img class="meal-content-image" src="${meal.image}"
                         alt="all Meat Burger">
                     <div class="meal-content-describtion">
-                        <h2>${meal.name}</h2>
+                        <h2 class="meal-name-font">${meal.name}</h2>
                         <p>${meal.ingredients}</p>
                     </div>
                     <div class="meal-content-price-and-button">

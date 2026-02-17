@@ -154,18 +154,47 @@ function createID(category) {
 
 function closeBasket() {
     let basketMeal = document.getElementById('basket-site');
-    basketMeal.classList.remove("open")
+    basketMeal.classList.add("hide");
+    removeSliderSmallerWhenBasketIsOpen();
 }
 
 
 function openBasket() {
     let basketMeal = document.getElementById('basket-site');
-    basketMeal.classList.add("open")
+    basketMeal.classList.remove("hide")
+    getSliderSmallerWhenBasketIsOpen();
 }
+
+
+function toggleBasket() {
+    let basketMeal = document.getElementById('basket-site');
+    basketMeal.classList.toggle("hide");
+    toggleSliderSmallerWhenBasketIsOpen();
+}
+
 
 function updateBasketCount() {
     let basketCount = document.getElementById('basket-count');
     basketCount.textContent = basket.length;
+}
+
+/* these functions make the footer content fit when the basket is open and
+get it back bigger when basket is closed  */
+function getSliderSmallerWhenBasketIsOpen() {
+    let barSlider = document.getElementById('bar-slider-inner');
+    barSlider.classList.add('bar-slider-inner-Responsive');
+}
+
+
+function toggleSliderSmallerWhenBasketIsOpen() {
+    let barSlider = document.getElementById('bar-slider-inner');
+    barSlider.classList.toggle('bar-slider-inner-Responsive');
+}
+
+
+function removeSliderSmallerWhenBasketIsOpen() {
+    let barSlider = document.getElementById('bar-slider-inner');
+    barSlider.classList.remove('bar-slider-inner-Responsive');
 }
 
 

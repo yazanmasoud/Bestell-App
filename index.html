@@ -19,7 +19,7 @@
 
 <body onload="init()">
     <header class="site-header">
-        <div class="content header-logo-menu">
+        <div id="header-inner" class="content header-logo-menu">
             <img src="./logos/Logo-bestellapp.svg" alt="Page Logo">
             <button class="menu-button">
                 <img src="./buttons/menu.svg" alt="menu button">
@@ -28,7 +28,7 @@
     </header>
 
     <main class="site-main">
-        <button class="basket-button-icon" onclick="openBasket()">
+        <button class="basket-button-icon" onclick="toggleBasket()">
             <img src="./assets/icons/shopping_cart.svg" alt="shopping cart">
             <span id="basket-count" class="basket-count"></span>
         </button>
@@ -37,11 +37,11 @@
                 <img class="main-image" src="./assets/images/mainImage.png" alt="">
                 <img class="burger-logo" src="./logos/burgerLogo.png" alt="">
             </div>
-            <img src="./assets/images/restaurantNameImage.png" alt="Name of the restaurant">
+            <img class="restaurant-name-image" src="./assets/images/restaurantNameImage.png" alt="Name of the restaurant">
         </div>
 
         <section class="bar-slider">
-            <div class="bar-slider-inner content">
+            <div id="bar-slider-inner" class="bar-slider-inner content">
                 <a href="#burger-sandwiches"><span>Burger & Sandwiches</span></a>
                 <a href="#pizza"><span>Pizza</span></a>
                 <a href="#salad"><span>Salad</span></a>
@@ -54,7 +54,7 @@
 
             <section class="meals" id="meals"></section>
 
-            <aside class="basket content" id="basket-site">
+            <aside class="basket content hide" id="basket-site">
 
                 <h2 class="basket-title">Your Basket
                     <button onclick="closeBasket()" class="basket-close-button"><img class="exit-icon"
@@ -63,6 +63,7 @@
                 <section class="basket-content" id="basket"></section>
                 <section class="basket-price" id="order-price"></section>
             </aside>
+
 
             <dialog class="order-confirmation" id="confirmation-dialog">
                 <img class="confirmation-icon" src="./assets/icons/order-car.svg" alt="confirmation icon">
@@ -76,7 +77,7 @@
     </main>
 
     <footer class="site-footer">
-        <div class="footer-inner content">
+        <div id="footer-inner" class="footer-inner content">
             <span>2025 BurgerHouse</span>
             <span>Imprint</span>
             <span>Cookie Preferences</span>
