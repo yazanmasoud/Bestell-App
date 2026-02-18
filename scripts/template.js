@@ -10,7 +10,7 @@ function getFoodTemplate(meal, mealIndex) {
                     </div>
                     <div class="meal-content-price-and-button">
                         <span><strong>${(meal.price).toFixed(2)}€</strong></span>
-                        <button onclick="addMealToBasket(${mealIndex})"><img src="./buttons/addToBasketButton.svg" alt=""></button>
+                        <button class="add-meal-button" onclick="addMealToBasket(${mealIndex})">Add To Basket</button>
                     </div>
                 </div>
             </article>`

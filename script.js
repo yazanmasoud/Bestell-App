@@ -120,6 +120,7 @@ function renderBasket() {
         }
     }
     renderTotalPrice();
+    getSliderSmallerWhenBasketIsOpen();
 }
 
 
@@ -160,9 +161,11 @@ function openBasket() {
 
     if (window.innerWidth > 1070) {
         basket.classList.remove('closed'); 
+        getSliderSmallerWhenBasketIsOpen();
     } else {
         basket.classList.add('open');
     }
+    
 }
 
 function closeBasket() {
@@ -170,9 +173,12 @@ function closeBasket() {
 
     if (window.innerWidth > 1070) {
         basket.classList.add('closed'); 
+        removeSliderSmallerWhenBasketIsOpen(); 
     } else {
-        basket.classList.remove('open'); 
+        basket.classList.remove('open');
+        
     }
+   
 }
 
 function toggleBasket() {
@@ -180,9 +186,11 @@ function toggleBasket() {
 
     if (window.innerWidth > 1070) {
         basket.classList.toggle('closed');
+        toggleSliderSmallerWhenBasketIsOpen();
     } else {
         basket.classList.toggle('open'); 
     }
+    
 }
 
 

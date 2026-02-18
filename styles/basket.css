@@ -20,7 +20,7 @@
 
 .basket {
     width: 350px;
-    max-height: 75vh;
+    height: 700px;
     background-color: white;
     position: fixed;
     top: 88px;
@@ -152,6 +152,17 @@
     margin: 32px;
 }
 
+.buy-now-button:hover {
+    background-color: #b96532;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.buy-now-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
 .basket-button-icon {
     position: fixed;
     bottom: 80px;
@@ -221,7 +232,22 @@
 
 }
 
-.basket-responsive-image {}
+.basket-responsive-image-count {
+    position: relative;
+}
+
+.basket-count-mobile {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f2e3d6;
+    font-size: 18px;
+    color: #c06427;
+
+}
 
 
 /* Responsive */
@@ -239,17 +265,13 @@
 }
 
 /* --------------------------- */
-@media (max-width : 1350px) {
+@media (max-width : 1370px) {
     .basket {
         right: calc((100% - 1440px)/2 + 112px);
     }
 
     .basket-button-icon {
         right: calc((100% - 1440px)/2 + 112px);
-    }
-
-    .bar-slider-inner-Responsive {
-        gap: 150px;
     }
 }
 
@@ -268,7 +290,6 @@
 @media (max-width: 1070px) {
     .basket {
         width: 100%;
-        height: 100vh;
         left: 0;
         right: 0;
         top: auto;
@@ -303,4 +324,63 @@
         width: 20px;
         height: 20px;
     }
+}
+
+/* --------------------- */
+@media (max-width : 850px) {
+    .restaurant-name-image {
+        width: 700px;
+    }
+}
+
+/* --------------------- */
+@media (max-width : 720px) {
+    .bar-slider {
+        display: none;
+    }
+
+    .meal-content-title-inner {
+        justify-content: center;
+        padding: 8px;
+    }
+
+    .category-icon {
+        left: 320px;
+        transform: translateY(-50%);
+        height: 80px;
+        top: auto;
+        bottom: 12%;
+    }
+
+    .meal-content {
+        width: 600px;
+        height: 210px;
+    }
+
+    .meal-content-image {
+        width: 180px;
+        height: 140px;
+    }
+
+    .meals-and-basket {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 0;
+    }
+
+    .basket-responsive {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .meals {
+        margin: 0 auto;
+    }
+
 }
