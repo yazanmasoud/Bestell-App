@@ -37,7 +37,8 @@
                 <img class="main-image" src="./assets/images/mainImage.png" alt="">
                 <img class="burger-logo" src="./logos/burgerLogo.png" alt="">
             </div>
-            <img class="restaurant-name-image" src="./assets/images/restaurantNameImage.png" alt="Name of the restaurant">
+            <img class="restaurant-name-image" src="./assets/images/restaurantNameImage.png"
+                alt="Name of the restaurant">
         </div>
 
         <section class="bar-slider">
@@ -54,7 +55,7 @@
 
             <section class="meals" id="meals"></section>
 
-            <aside class="basket content hide" id="basket-site">
+            <aside class="basket content" id="basket-site">
 
                 <h2 class="basket-title">Your Basket
                     <button onclick="closeBasket()" class="basket-close-button"><img class="exit-icon"
@@ -63,7 +64,6 @@
                 <section class="basket-content" id="basket"></section>
                 <section class="basket-price" id="order-price"></section>
             </aside>
-
 
             <dialog class="order-confirmation" id="confirmation-dialog">
                 <img class="confirmation-icon" src="./assets/icons/order-car.svg" alt="confirmation icon">
@@ -74,6 +74,14 @@
             </dialog>
 
         </div>
+        <section class="basket-responsive hide">
+            <button onclick="toggleBasket()" class="basket-responsive-button">Basket
+                <img class="basket-responsive-image" src="./assets/icons/shopping_cart.svg" alt="">
+                <span id="basket-count-mobile" class="basket-count"></span>
+            </button>
+
+        </section>
+
     </main>
 
     <footer class="site-footer">

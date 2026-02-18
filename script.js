@@ -62,8 +62,11 @@ function addMealToBasket(mealIndex) {
         });
     }
     updateBasketCount();
-    openBasket();
     renderBasket();
+    if (window.innerWidth > 1070) {
+        openBasket();
+        
+    }
 }
 
 
@@ -152,30 +155,42 @@ function createID(category) {
 }
 
 
-function closeBasket() {
-    let basketMeal = document.getElementById('basket-site');
-    basketMeal.classList.add("hide");
-    removeSliderSmallerWhenBasketIsOpen();
-}
-
-
 function openBasket() {
-    let basketMeal = document.getElementById('basket-site');
-    basketMeal.classList.remove("hide")
-    getSliderSmallerWhenBasketIsOpen();
+    const basket = document.getElementById('basket-site');
+
+    if (window.innerWidth > 1070) {
+        basket.classList.remove('closed'); 
+    } else {
+        basket.classList.add('open');
+    }
 }
 
+function closeBasket() {
+    const basket = document.getElementById('basket-site');
+
+    if (window.innerWidth > 1070) {
+        basket.classList.add('closed'); 
+    } else {
+        basket.classList.remove('open'); 
+    }
+}
 
 function toggleBasket() {
-    let basketMeal = document.getElementById('basket-site');
-    basketMeal.classList.toggle("hide");
-    toggleSliderSmallerWhenBasketIsOpen();
+    const basket = document.getElementById('basket-site');
+
+    if (window.innerWidth > 1070) {
+        basket.classList.toggle('closed');
+    } else {
+        basket.classList.toggle('open'); 
+    }
 }
 
 
 function updateBasketCount() {
     let basketCount = document.getElementById('basket-count');
+    let basketCountMobile = document.getElementById('basket-count-mobile');
     basketCount.textContent = basket.length;
+    basketCountMobile.textContent = basket.length;
 }
 
 /* these functions make the footer content fit when the basket is open and
