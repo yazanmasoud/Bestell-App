@@ -308,7 +308,7 @@
 
     .basket.open {
         transform: translateY(0);
-        bottom: 140px;
+        bottom: 56px;
         width: 50%;
     }
 
@@ -341,7 +341,7 @@
         height: 136px;
     }
 
-        .basket-responsive {
+    .basket-responsive {
         display: block;
         position: fixed;
         bottom: 0;
@@ -412,6 +412,10 @@
 
 /* ------------------- */
 @media (max-width : 730px) {
+    .basket {
+        height: 90%;
+    }
+
     .restaurant-name-image {
         width: 500px;
     }
@@ -441,7 +445,7 @@
 
     .meal-content-image {
         width: 80%;
-        height: 100px;
+        height: 130px;
         margin-top: 8px;
         margin-left: 0;
     }
@@ -472,8 +476,8 @@
 
     .basket.open {
         transform: translateY(0);
-        bottom: 140px;
-        width: 95%;
+        bottom: 56px;
+        width: 90%;
     }
 
     .basket-title {
@@ -482,7 +486,15 @@
     }
 
     .empty-basket-paragraph {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .buy-now-button {
+        margin: 8px;
+    }
+
+    .basket-price-table td {
+        padding: 8px 24px;
     }
 }
 
@@ -497,6 +509,10 @@
     .meal-content-title-h2 {
         font-size: 22px;
     }
+
+    .basket-meal {
+        width: 270px;
+    }
 }
 
 /* ----------------------- */
@@ -507,6 +523,6 @@
     }
 
     .basket-title {
-        gap: 110px;
+        gap: 95px;
     }
 }

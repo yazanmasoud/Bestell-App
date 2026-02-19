@@ -120,7 +120,7 @@ function renderBasket() {
         }
     }
     renderTotalPrice();
-    getSliderSmallerWhenBasketIsOpen();
+    handleSliderClass("add");
 }
 
 
@@ -161,7 +161,7 @@ function openBasket() {
 
     if (window.innerWidth > 1070) {
         basket.classList.remove('closed'); 
-        getSliderSmallerWhenBasketIsOpen();
+        handleSliderClass("add");
     } else {
         basket.classList.add('open');
     }
@@ -173,7 +173,7 @@ function closeBasket() {
 
     if (window.innerWidth > 1070) {
         basket.classList.add('closed'); 
-        removeSliderSmallerWhenBasketIsOpen(); 
+        handleSliderClass("remove"); 
     } else {
         basket.classList.remove('open');
         
@@ -186,7 +186,7 @@ function toggleBasket() {
 
     if (window.innerWidth > 1070) {
         basket.classList.toggle('closed');
-        toggleSliderSmallerWhenBasketIsOpen();
+        handleSliderClass("toggle");
     } else {
         basket.classList.toggle('open'); 
     }
@@ -203,22 +203,11 @@ function updateBasketCount() {
 
 /* these functions make the footer content fit when the basket is open and
 get it back bigger when basket is closed  */
-function getSliderSmallerWhenBasketIsOpen() {
-    let barSlider = document.getElementById('bar-slider-inner');
-    barSlider.classList.add('bar-slider-inner-Responsive');
+function handleSliderClass(action) {
+    const barSlider = document.getElementById('bar-slider-inner');
+    barSlider.classList[action]('bar-slider-inner-Responsive');
 }
 
-
-function toggleSliderSmallerWhenBasketIsOpen() {
-    let barSlider = document.getElementById('bar-slider-inner');
-    barSlider.classList.toggle('bar-slider-inner-Responsive');
-}
-
-
-function removeSliderSmallerWhenBasketIsOpen() {
-    let barSlider = document.getElementById('bar-slider-inner');
-    barSlider.classList.remove('bar-slider-inner-Responsive');
-}
 
 
 function openConfirmationDialog() {
