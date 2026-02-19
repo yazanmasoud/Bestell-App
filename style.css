@@ -20,7 +20,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
 }
 
 .header-logo-menu-responsive {
@@ -58,6 +57,12 @@
 }
 
 /* Meals */
+.meal {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px;
+}
+
 .meals-and-basket {
     position: relative;
     display: flex;
@@ -69,10 +74,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .meal-content {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     height: 220px;
     background-color: #fce9dc;
     margin: 32px 0;
@@ -181,6 +188,10 @@
 
 .restaurant-name-image {
     width: 850px;
+}
+
+.site-header {
+    height: 65px;
 }
 
 /* Order Confirmation Dialog */

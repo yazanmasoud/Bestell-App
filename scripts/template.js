@@ -1,6 +1,6 @@
 /* Main Site (meals) */
 function getFoodTemplate(meal, mealIndex) {
-    return `<article class="content meal">
+    return `<article class="meal content">
                 <div class="meal-content">
                     <img class="meal-content-image" src="${meal.image}"
                         alt="all Meat Burger">
