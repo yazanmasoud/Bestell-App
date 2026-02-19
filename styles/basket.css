@@ -332,6 +332,22 @@
         width: 20px;
         height: 20px;
     }
+
+    .footer-inner {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        height: 136px;
+    }
+
+        .basket-responsive {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
 
 /* ------------------------- */
@@ -368,14 +384,6 @@
         padding: 10;
     }
 
-    .basket-responsive {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
     .restaurant-name-image {
         width: 700px;
     }
@@ -391,14 +399,6 @@
 
     .meal-name-font {
         font-size: 22px;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0;
-        height: 136px;
     }
 
     .menu-button-image {
