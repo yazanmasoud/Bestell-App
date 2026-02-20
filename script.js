@@ -159,7 +159,7 @@ function createID(category) {
 function openBasket() {
     const basket = document.getElementById('basket-site');
 
-    if (window.innerWidth > 1070) {
+    if (window.innerWidth > 1150) {
         basket.classList.remove('closed'); 
         handleSliderClass("add");
     } else {
@@ -171,7 +171,7 @@ function openBasket() {
 function closeBasket() {
     const basket = document.getElementById('basket-site');
 
-    if (window.innerWidth > 1070) {
+    if (window.innerWidth > 1150) {
         basket.classList.add('closed'); 
         handleSliderClass("remove"); 
     } else {
@@ -184,7 +184,7 @@ function closeBasket() {
 function toggleBasket() {
     const basket = document.getElementById('basket-site');
 
-    if (window.innerWidth > 1070) {
+    if (window.innerWidth > 1150) {
         basket.classList.toggle('closed');
         handleSliderClass("toggle");
     } else {
