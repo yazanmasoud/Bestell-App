@@ -19,6 +19,8 @@ function init() {
         }
     }
     renderBasket();
+    syncSliderWithBasket();
+
 }
 
 /*  also erstmal in dem init()
@@ -61,13 +63,13 @@ function addMealToBasket(mealIndex) {
             amount: 1
         });
     }
+
     updateBasketCount();
     renderBasket();
-    if (window.innerWidth > 1150) {
-        openBasket();
-        
-    }
+
+    openBasket();
 }
+
 
 
 function getBasketAmountImageSource(mealIndex) {
@@ -120,7 +122,6 @@ function renderBasket() {
         }
     }
     renderTotalPrice();
-    handleSliderClass("add");
 }
 
 
@@ -156,41 +157,61 @@ function createID(category) {
 }
 
 
+function syncSliderWithBasket() {
+    const basket = document.getElementById('basket-site');
+
+    if (window.innerWidth > 1150) {
+        basket.classList.remove('open');
+
+        if (!basket.classList.contains('closed')) {
+            handleSliderClass("add");
+        } else {
+            handleSliderClass("remove");
+        }
+
+    } else {
+        basket.classList.remove('closed');
+        handleSliderClass("remove");
+    }
+}
+
+
 function openBasket() {
     const basket = document.getElementById('basket-site');
 
     if (window.innerWidth > 1150) {
-        basket.classList.remove('closed'); 
-        handleSliderClass("add");
+        basket.classList.remove('closed');
     } else {
         basket.classList.add('open');
     }
-    
+
+    syncSliderWithBasket();
 }
+
 
 function closeBasket() {
     const basket = document.getElementById('basket-site');
 
     if (window.innerWidth > 1150) {
-        basket.classList.add('closed'); 
-        handleSliderClass("remove"); 
+        basket.classList.add('closed');
     } else {
         basket.classList.remove('open');
-        
     }
-   
+
+    syncSliderWithBasket();
 }
+
 
 function toggleBasket() {
     const basket = document.getElementById('basket-site');
 
     if (window.innerWidth > 1150) {
         basket.classList.toggle('closed');
-        handleSliderClass("toggle");
     } else {
-        basket.classList.toggle('open'); 
+        basket.classList.toggle('open');
     }
-    
+
+    syncSliderWithBasket();
 }
 
 
@@ -209,7 +230,6 @@ function handleSliderClass(action) {
 }
 
 
-
 function openConfirmationDialog() {
     const dialog = document.getElementById('confirmation-dialog');
 
@@ -223,4 +243,4 @@ function openConfirmationDialog() {
 
 }
 
-
+window.addEventListener("resize", syncSliderWithBasket);
