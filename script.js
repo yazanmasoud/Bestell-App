@@ -67,8 +67,11 @@ function addMealToBasket(mealIndex) {
     updateBasketCount();
     renderBasket();
 
-    openBasket();
+    if (window.innerWidth > 1150) {
+        openBasket();
+    }
 }
+
 
 
 
