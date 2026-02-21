@@ -188,8 +188,11 @@ function openBasket() {
         basket.classList.add('open');
     }
 
+    document.body.classList.add("no-scroll");
+
     syncSliderWithBasket();
 }
+
 
 
 function closeBasket() {
@@ -201,21 +204,35 @@ function closeBasket() {
         basket.classList.remove('open');
     }
 
+    document.body.classList.remove("no-scroll");
+
     syncSliderWithBasket();
 }
+
 
 
 function toggleBasket() {
     const basket = document.getElementById('basket-site');
 
+    let isOpen;
+
     if (window.innerWidth > 1150) {
         basket.classList.toggle('closed');
+        isOpen = !basket.classList.contains('closed');
     } else {
         basket.classList.toggle('open');
+        isOpen = basket.classList.contains('open');
+    }
+
+    if (isOpen) {
+        document.body.classList.add("no-scroll");
+    } else {
+        document.body.classList.remove("no-scroll");
     }
 
     syncSliderWithBasket();
 }
+
 
 
 function updateBasketCount() {

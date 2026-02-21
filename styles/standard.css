@@ -29,3 +29,6 @@ dialog:not([open]) {
     display: none;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
