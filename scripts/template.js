@@ -34,13 +34,13 @@ function getBasketTemplate(meal, mealIndex) {
                         <div class="basket-meal-name">
                                 <h3 class="basket-meal-h3">${meal.name}</h3>
                             <div class="basket-icons-block">
-                                <button onclick="decreaseOrDeleteBasketMealAmount(${mealIndex})"><img class="plus-minus-delet-icon" src="${getBasketAmountImageSource(mealIndex)}" alt="Delete Icon"></button>
+                                <button onclick="updateBasketMealAmount(${mealIndex}, -1)"><img class="plus-minus-delet-icon" src="${getBasketAmountImageSource(mealIndex)}" alt="Delete Icon"></button>
                                 <span>${meal.amount}</span>
-                                <button onclick="increaseBasketMealAmount(${mealIndex})"><img class="plus-minus-delet-icon" src="./assets/icons/icons8-plus.svg" alt="Plus Icon"></button>  
+                                <button onclick="updateBasketMealAmount(${mealIndex}, 1)"><img class="plus-minus-delet-icon" src="./assets/icons/icons8-plus.svg" alt="Plus Icon"></button>  
                             </div>
                         </div>
                         <div class="basket-meal-name-price">
-                            <button class="delete-meal-from-basket-button" onclick="deletMealFromBasket(${mealIndex})"><img class="plus-minus-delet-icon" src="./assets/icons/icons8-trash.svg" alt=""></button>
+                            <button class="delete-meal-from-basket-button" onclick="deleteMealFromBasket(${mealIndex})"><img class="plus-minus-delet-icon" src="./assets/icons/icons8-trash.svg" alt=""></button>
                             <span>${(meal.price * meal.amount).toFixed(2)}€</span>
                         </div>
                     </div>`
